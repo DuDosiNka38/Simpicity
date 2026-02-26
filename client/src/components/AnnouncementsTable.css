@@ -1,0 +1,61 @@
+/* AnnouncementsTable.css */
+
+.tableWrap {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.thead th {
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+  background: #f8fafc;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+
+.tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+  color: #0f172a;
+}
+
+.tbody tr:hover td {
+  background: #fbfdff;
+}
+
+.muted {
+  color: #64748b;
+  font-variant-numeric: tabular-nums;
+}
+
+.categories {
+  color: #334155;
+}
+
+.actions {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.empty {
+  padding: 18px 14px;
+  color: #64748b;
+}
+
+@media (max-width: 840px) {
+  .hideOnMobile {
+    display: none;
+  }
+}

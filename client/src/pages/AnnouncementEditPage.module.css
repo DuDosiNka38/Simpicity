@@ -1,0 +1,232 @@
+.page {
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  background: #0b0f17;
+}
+
+.card {
+  width: 100%;
+  max-width: 860px;
+  background: #0f1624;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.92);
+  letter-spacing: 0.2px;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.60);
+  font-size: 13px;
+}
+
+.headerActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.form {
+  padding-top: 16px;
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.labelRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.label {
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.muted {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 12px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 12px;
+  padding: 12px 12px;
+  outline: none;
+  transition: border-color 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgba(255, 255, 255, 0.24);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.helpRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.helpText {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 12px;
+}
+
+.counter {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 12px;
+}
+
+.categoriesWrap,
+.dateWrap {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.alertError,
+.alertInfo {
+  margin-top: 14px;
+  padding: 12px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.alertError {
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  background: rgba(239, 68, 68, 0.12);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.alertInfo {
+  border: 1px solid rgba(59, 130, 246, 0.28);
+  background: rgba(59, 130, 246, 0.12);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.primaryBtn,
+.secondaryBtn {
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 80ms ease, opacity 120ms ease, background 120ms ease, border-color 120ms ease;
+}
+
+.primaryBtn {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(99, 102, 241, 0.92);
+  color: white;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.primaryBtn:disabled,
+.secondaryBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.footerActions {
+  display: none;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Loading skeleton */
+.skeletonTitle {
+  height: 26px;
+  width: 40%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  margin-bottom: 14px;
+}
+
+.skeletonLine {
+  height: 12px;
+  width: 70%;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+}
+
+.skeletonBlock {
+  height: 180px;
+  width: 100%;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  margin-top: 14px;
+}
+
+/* Responsive: move actions to bottom on small screens */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .headerActions {
+    display: none;
+  }
+
+  .footerActions {
+    display: flex;
+  }
+}
